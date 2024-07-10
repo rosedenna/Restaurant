@@ -42,11 +42,59 @@
           box-shadow: 2px 3px 2px black;
           cursor: pointer;
         }
+        .container1 {
+  position: relative;
+  width: 300px;
+  margin: 10px;
+}
+
+.image {
+  
+  width: 300px;
+  height: 300px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+.container1:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.text {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.class1{
+  display: flex;
+}
      </style>
 </head>
 <body>
 
     <!-- Intro page -->
+     <div id="home">
     <div class="images">
         <div class="row">
     <img src="https://www.deputy.com/uploads/2018/10/The-Most-Popular-Menu-Items-That-You-should-Consider-Adding-to-Your-Restaurant_Content-image1-min-1024x569.png" alt="">
@@ -62,8 +110,14 @@
 </div>
 
 <!-- Navbar -->
- <div class="container" style="margin-left: 630px; position: sticky; top: 0px;;">
+ <div class="container" style="margin-left: 550px; position: sticky; top: 0px;;">
 <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#indian">Indian</a>
+    </li>
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="#indian">Indian</a>
     </li>
@@ -82,8 +136,40 @@
     <img src="https://www.mistay.in/travel-blog/content/images/2020/07/panner-cover.jpg" alt="">
 </div>
 </div>
+<!-- Transition -->
+<h1 class="text-center text-light m-4" style="background-color:rgb(20, 52, 114) ;"><i class="fa-solid fa-award fa-bounce" style="color: #FFD43B;"></i></i> AWARDS</h1>
+
+<h3 class="text-center">We received awards of excellence for our delicious food and quality service. This is a thank you note for your support and love. </h3>
+<div class="container class1">
+<div class="container1">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIXSfD0OmsTXhivYw3TOf-JzNHp_3rZcpuDw&s" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Good Food Awards - 2023</div>
+  </div>
+</div>
+<div class="container1">
+  <img src="https://www.shutterstock.com/shutterstock/photos/1384579919/display_1500/stock-vector-best-restaurant-award-vector-golden-badge-1384579919.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Best Restaurant Awards - 2019</div>
+  </div>
+</div>
+<div class="container1">
+  <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/bb/4f/8c/best-restaurant-award.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Summer Ball Winner - 2016</div>
+  </div>
+</div>
+<div class="container1">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBYnGZP37IpVmhttV8VCbmWFTExkNKAXa8nA&s" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Gold Awards - 2018</div>
+  </div>
+</div>
+</div>
+</div>
+
  <!-- Indian -->
-  <div class="indian">
+  <div id="indian">
   <div class="container">
   <h1 class="text-center text-light m-4" style="background-color:rgb(20, 52, 114) ;"><i class="fa-solid fa-bowl-food fa-bounce" style="color: #FFD43B;"></i> INDIAN DISHES</h1>
   <!-- one -->
@@ -406,7 +492,7 @@
 </div>
 <!-- END -->
  <!-- Chineese -->
-  <div class="chineese">
+  <div id="chineese">
   <div class="container">
   <h1 class="text-center text-light m-4" style="background-color:rgb(20, 52, 114) ;"><i class="fa-solid fa-bowl-food fa-bounce" style="color: #FFD43B;"></i> CHINEESE DISHES</h1>
   <!-- one -->
@@ -722,7 +808,7 @@
 </div>
 <!-- END -->
  <!-- Arabian -->
-  <div class="indian">
+  <div id="arabian">
   <div class="container">
   <h1 class="text-center text-light m-4" style="background-color:rgb(20, 52, 114) ;"><i class="fa-solid fa-bowl-food fa-bounce" style="color: #FFD43B;"></i> ARABIAN DISHES</h1>
   <!-- one -->
@@ -1114,10 +1200,6 @@
       <a class="text-body" href="https://paragonfood.com/">paragonfood.com</a>
     </div>
     <!-- Copyright -->
-  </footer>
-
-
-
-
+  </footer>  
 </body>
 </html>
